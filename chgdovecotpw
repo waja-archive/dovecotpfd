@@ -42,7 +42,7 @@ DEFINE SCRIPT CONSTANTS
 */
 
 // Path to dovecotpw
-define("DOVECOTPW", "/usr/sbin/dovecotpw");
+define("DOVECOTPW", "/usr/bin/doveadm pw");
 
 // Script messages
 define("MSG_CLI_ERROR", "This script must be run from the CLI. Exiting." . PHP_EOL);
