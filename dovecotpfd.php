@@ -62,7 +62,7 @@ class rcube_dovecotpfd_password
         if ( empty($passwdfile) ) $passwdfile = sprintf("/home/mail/%s/passwd", $domain);
         
         // Build command to call dovecotpfd-setuid wrapper
-        $exec_cmd = sprintf("%s/dovecotpfd-setuid -f=%s -u=%s -s=%s -p=\"%s\" 2>&1", $currdir, escapeshellcmd(realpath($passwdfile)), escapeshellcmd($username), escapeshellcmd($scheme), escapeshellcmd($newpass));
+        $exec_cmd = sprintf("%s/dovecotpfd-setuid -f=%s -u=%s -s=%s -p=\"%s\" 2>&1", $currdir, escapeshellcmd($passwdfile), escapeshellcmd($username), escapeshellcmd($scheme), escapeshellcmd($newpass));
         
         // Call wrapper to change password
         if ($ph = @popen($exec_cmd, "r"))
